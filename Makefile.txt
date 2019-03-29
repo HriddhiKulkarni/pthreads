@@ -2,6 +2,7 @@ CC = gcc
 LIB = -lpthread
 EXE0 = mutex_lock
 EXE1 = read_write_lock
+EXE2 = gausselim
 
 $(EXE0): $(EXE0).exe
         ./$<      
@@ -14,8 +15,14 @@ $(EXE1): $(EXE1).exe
 
 %.exe : %.c
         $(CC) $(LIB) -o $@ $^
+        
+$(EXE2): $(EXE2).exe
+        ./$<      
 
-all: $(EXE0) $(EXE1)
+%.exe : %.c
+        $(CC) $(LIB) -o $@ $^
+
+all: $(EXE0) $(EXE1) $(EXE2)
 
 clean:
         rm -f *.exe
