@@ -4,6 +4,9 @@
  * hriddhi.kulkarni@ttu.edu
  * * * */
 
+/* Gaussian elimination without pivoting using pthreads */
+
+
 /* Header files  */
 #include <stdio.h>
 #include <string.h>
