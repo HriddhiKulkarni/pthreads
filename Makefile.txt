@@ -1,14 +1,21 @@
 CC = gcc
 LIB = -lpthread
-EXE0 = example77
+EXE0 = mutex_lock
+EXE1 = read_write_lock
 
 $(EXE0): $(EXE0).exe
         ./$<      
 
 %.exe : %.c
         $(CC) $(LIB) -o $@ $^
+        
+$(EXE1): $(EXE1).exe
+        ./$<      
 
-all: $(EXE0)
+%.exe : %.c
+        $(CC) $(LIB) -o $@ $^
+
+all: $(EXE0) $(EXE1)
 
 clean:
         rm -f *.exe
