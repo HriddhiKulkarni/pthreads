@@ -1,3 +1,11 @@
+/*
+ * Hriddhi Kulkarni
+ *
+ * hriddhi.kulkarni@ttu.edu
+ * */
+
+/* Header files */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
